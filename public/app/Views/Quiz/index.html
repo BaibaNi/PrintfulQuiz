@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <h1>Technical task</h1>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="post" action="/">
+        <div class="form_input">
+            <label for="name"></label>
+            <input type="text" class="input_box" id="name" name="name" placeholder="Enter your name"/>
+            {% if errors.name %}
+            <p class="small_error">{{ errors.name[0] }}</p>
+            {% endif %}
+        </div>
+
+        <div class="form_input">
+            <label for="quiz"></label>
+            <select id="quiz" name="quiz" class="select_box">
+                <option value="" selected disabled>Choose quiz</option>
+                {% for quiz in quiz_list %}
+                <option value="{{ quiz.id }}">{{ quiz.name }}</option>
+                {% endfor %}
+            </select>
+            {% if errors.quiz %}
+            <p class="small_error">{{ errors.quiz[0] }}</p>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="button_box">Start</button>
+    </form>
+</div>
+{% endblock %}

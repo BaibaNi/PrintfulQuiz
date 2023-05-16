@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/quiz.css') }}"/>
+  <title>Printful Quiz</title>
+</head>
+
+<body>
+<header id="header" >{% block header %}{% endblock %}</header>
+<div id="content">{% block content %}{% endblock %}</div>
+<footer id="footer">&copy; Copyright 2023 - BN</footer>
+</body>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+{% block scripts %}{% endblock %}
+</html>

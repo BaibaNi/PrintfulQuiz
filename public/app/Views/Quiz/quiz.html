@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block header %}
+    <h1>Quiz: {{ quiz_name }}</h1>
+{% endblock %}
+
+{% block content %}
+
+<div id="quiz-container" class="container">
+    <h2 id="question"></h2>
+    <ul id="answers"></ul>
+    <div id="progress_bar">
+        <div id="progress_bar_full"></div>
+    </div>
+    <button id="submit-btn" class="button_box">Next</button>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{{ asset('js/quiz.js') }}"></script>
+
+<script>
+    initializeQuiz();
+    displayQuestion(0); // Display the first question
+    document.getElementById("submit-btn").addEventListener("click", submitAnswer);
+</script>
+{% endblock %}

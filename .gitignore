@@ -1,0 +1,17 @@
+# phpstorm project files
+.idea
+
+# composer vendor dir
+/vendor
+
+# composer lock
+composer.lock
+
+# configuration file
+configuration.php
+
+# phoenix db migration file
+phoenix.php
+
+# phpunit cache
+.phpunit.result.cache

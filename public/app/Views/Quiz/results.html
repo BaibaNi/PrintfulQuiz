@@ -1,0 +1,16 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+    <h1>Thanks, {{ user_name }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div>
+        You responded correctly to {{ user_result }} out of {{ question_count }} questions.
+    </div>
+
+    <button class="button_box" onclick="location.href='/'">Take another quiz.</button>
+</div>
+{% endblock %}
